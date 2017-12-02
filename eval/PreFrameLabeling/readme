@@ -1,0 +1,5 @@
+1. concat groundtruths
+/media/data/mtriet/dataset/ground_truth/fb/
+2. concat scnn results
+/media/data/mtriet/scnn/experiments/huawei_c3d1.0/network_proposal
+run evaluation

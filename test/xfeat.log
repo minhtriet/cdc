@@ -1,0 +1,244 @@
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+E1202 22:33:18.676570 16485 extract_image_features.cpp:55] Using GPU #0
+I1202 22:33:18.678474 16485 net.cpp:65] Memory required for Data0
+I1202 22:33:18.678557 16485 net.cpp:76] Creating Layer data
+I1202 22:33:18.678565 16485 net.cpp:112] data -> data
+I1202 22:33:18.678578 16485 net.cpp:112] data -> truth
+I1202 22:33:18.678591 16485 video_segmentation_data_layer.cpp:229] Opening file /media/data/mtriet/cdc/huawei/predata/fb_eval/test_eval.lst
+I1202 22:33:18.679203 16485 video_segmentation_data_layer.cpp:250] A total of 1288 examples.
+I1202 22:33:18.745482 16485 video_segmentation_data_layer.cpp:294] output data size: 4,3,32,112,112
+I1202 22:33:18.745503 16485 video_segmentation_data_layer.cpp:298] output truth size: 4,1,32,112,112
+I1202 22:33:18.745507 16485 video_segmentation_data_layer.cpp:313] Loading mean file from/media/data/mtriet/dataset/script/data_prep/fb_mean.binaryproto
+I1202 22:33:18.935752 16485 video_segmentation_data_layer.cpp:342] compute frame-level mean file
+I1202 22:33:19.431917 16485 video_segmentation_data_layer.cpp:379] Initializing prefetch
+I1202 22:33:19.431970 16485 video_segmentation_data_layer.cpp:381] Prefetch initialized.
+I1202 22:33:19.432018 16485 net.cpp:127] Top shape: 4 3 32 112 112 (4816896)
+I1202 22:33:19.432023 16485 net.cpp:127] Top shape: 4 1 32 112 112 (1605632)
+I1202 22:33:19.432025 16485 net.cpp:136] Memory  required for Data 25690112
+I1202 22:33:19.432034 16485 net.cpp:159] data does not need backward computation.
+I1202 22:33:19.432057 16485 net.cpp:76] Creating Layer conv1a
+I1202 22:33:19.432065 16485 net.cpp:86] conv1a <- data
+I1202 22:33:19.432080 16485 net.cpp:112] conv1a -> conv1a
+I1202 22:33:19.453486 16485 net.cpp:127] Top shape: 4 64 32 112 112 (102760448)
+I1202 22:33:19.453516 16485 net.cpp:136] Memory  required for Data 436731904
+I1202 22:33:19.453523 16485 net.cpp:154] conv1a needs backward computation.
+I1202 22:33:19.453568 16485 net.cpp:76] Creating Layer relu1a
+I1202 22:33:19.453582 16485 net.cpp:86] relu1a <- conv1a
+I1202 22:33:19.453619 16485 net.cpp:100] relu1a -> conv1a (in-place)
+I1202 22:33:19.453631 16485 net.cpp:127] Top shape: 4 64 32 112 112 (102760448)
+I1202 22:33:19.453649 16485 net.cpp:136] Memory  required for Data 436731904
+I1202 22:33:19.453655 16485 net.cpp:154] relu1a needs backward computation.
+I1202 22:33:19.453665 16485 net.cpp:76] Creating Layer pool1
+I1202 22:33:19.453670 16485 net.cpp:86] pool1 <- conv1a
+I1202 22:33:19.453680 16485 net.cpp:112] pool1 -> pool1
+I1202 22:33:19.453699 16485 net.cpp:127] Top shape: 4 64 32 56 56 (25690112)
+I1202 22:33:19.453706 16485 net.cpp:136] Memory  required for Data 539492352
+I1202 22:33:19.453711 16485 net.cpp:154] pool1 needs backward computation.
+I1202 22:33:19.453725 16485 net.cpp:76] Creating Layer conv2a
+I1202 22:33:19.453730 16485 net.cpp:86] conv2a <- pool1
+I1202 22:33:19.453739 16485 net.cpp:112] conv2a -> conv2a
+I1202 22:33:19.523614 16485 net.cpp:127] Top shape: 4 128 32 56 56 (51380224)
+I1202 22:33:19.523635 16485 net.cpp:136] Memory  required for Data 745013248
+I1202 22:33:19.523641 16485 net.cpp:154] conv2a needs backward computation.
+I1202 22:33:19.523668 16485 net.cpp:76] Creating Layer relu2a
+I1202 22:33:19.523676 16485 net.cpp:86] relu2a <- conv2a
+I1202 22:33:19.523690 16485 net.cpp:100] relu2a -> conv2a (in-place)
+I1202 22:33:19.523699 16485 net.cpp:127] Top shape: 4 128 32 56 56 (51380224)
+I1202 22:33:19.523705 16485 net.cpp:136] Memory  required for Data 745013248
+I1202 22:33:19.523707 16485 net.cpp:154] relu2a needs backward computation.
+I1202 22:33:19.523717 16485 net.cpp:76] Creating Layer pool2
+I1202 22:33:19.523721 16485 net.cpp:86] pool2 <- conv2a
+I1202 22:33:19.523727 16485 net.cpp:112] pool2 -> pool2
+I1202 22:33:19.523738 16485 net.cpp:127] Top shape: 4 128 16 28 28 (6422528)
+I1202 22:33:19.523743 16485 net.cpp:136] Memory  required for Data 770703360
+I1202 22:33:19.523746 16485 net.cpp:154] pool2 needs backward computation.
+I1202 22:33:19.523758 16485 net.cpp:76] Creating Layer conv3a
+I1202 22:33:19.523777 16485 net.cpp:86] conv3a <- pool2
+I1202 22:33:19.523783 16485 net.cpp:112] conv3a -> conv3a
+I1202 22:33:19.599642 16485 net.cpp:127] Top shape: 4 256 16 28 28 (12845056)
+I1202 22:33:19.599659 16485 net.cpp:136] Memory  required for Data 822083584
+I1202 22:33:19.599663 16485 net.cpp:154] conv3a needs backward computation.
+I1202 22:33:19.599681 16485 net.cpp:76] Creating Layer relu3a
+I1202 22:33:19.599697 16485 net.cpp:86] relu3a <- conv3a
+I1202 22:33:19.599707 16485 net.cpp:100] relu3a -> conv3a (in-place)
+I1202 22:33:19.599714 16485 net.cpp:127] Top shape: 4 256 16 28 28 (12845056)
+I1202 22:33:19.599717 16485 net.cpp:136] Memory  required for Data 822083584
+I1202 22:33:19.599720 16485 net.cpp:154] relu3a needs backward computation.
+I1202 22:33:19.599728 16485 net.cpp:76] Creating Layer conv3b
+I1202 22:33:19.599732 16485 net.cpp:86] conv3b <- conv3a
+I1202 22:33:19.599738 16485 net.cpp:112] conv3b -> conv3b
+I1202 22:33:19.722983 16485 net.cpp:127] Top shape: 4 256 16 28 28 (12845056)
+I1202 22:33:19.722997 16485 net.cpp:136] Memory  required for Data 873463808
+I1202 22:33:19.723001 16485 net.cpp:154] conv3b needs backward computation.
+I1202 22:33:19.723012 16485 net.cpp:76] Creating Layer relu3b
+I1202 22:33:19.723018 16485 net.cpp:86] relu3b <- conv3b
+I1202 22:33:19.723037 16485 net.cpp:100] relu3b -> conv3b (in-place)
+I1202 22:33:19.723043 16485 net.cpp:127] Top shape: 4 256 16 28 28 (12845056)
+I1202 22:33:19.723057 16485 net.cpp:136] Memory  required for Data 873463808
+I1202 22:33:19.723060 16485 net.cpp:154] relu3b needs backward computation.
+I1202 22:33:19.723070 16485 net.cpp:76] Creating Layer pool3
+I1202 22:33:19.723074 16485 net.cpp:86] pool3 <- conv3b
+I1202 22:33:19.723080 16485 net.cpp:112] pool3 -> pool3
+I1202 22:33:19.723093 16485 net.cpp:127] Top shape: 4 256 8 14 14 (1605632)
+I1202 22:33:19.723109 16485 net.cpp:136] Memory  required for Data 879886336
+I1202 22:33:19.723111 16485 net.cpp:154] pool3 needs backward computation.
+I1202 22:33:19.723131 16485 net.cpp:76] Creating Layer conv4a
+I1202 22:33:19.723145 16485 net.cpp:86] conv4a <- pool3
+I1202 22:33:19.723151 16485 net.cpp:112] conv4a -> conv4a
+I1202 22:33:20.151052 16485 net.cpp:127] Top shape: 4 512 8 14 14 (3211264)
+I1202 22:33:20.151069 16485 net.cpp:136] Memory  required for Data 892731392
+I1202 22:33:20.151073 16485 net.cpp:154] conv4a needs backward computation.
+I1202 22:33:20.151085 16485 net.cpp:76] Creating Layer relu4a
+I1202 22:33:20.151093 16485 net.cpp:86] relu4a <- conv4a
+I1202 22:33:20.151111 16485 net.cpp:100] relu4a -> conv4a (in-place)
+I1202 22:33:20.151129 16485 net.cpp:127] Top shape: 4 512 8 14 14 (3211264)
+I1202 22:33:20.151131 16485 net.cpp:136] Memory  required for Data 892731392
+I1202 22:33:20.151134 16485 net.cpp:154] relu4a needs backward computation.
+I1202 22:33:20.151165 16485 net.cpp:76] Creating Layer conv4b
+I1202 22:33:20.151170 16485 net.cpp:86] conv4b <- conv4a
+I1202 22:33:20.151190 16485 net.cpp:112] conv4b -> conv4b
+I1202 22:33:21.056217 16485 net.cpp:127] Top shape: 4 512 8 14 14 (3211264)
+I1202 22:33:21.056234 16485 net.cpp:136] Memory  required for Data 905576448
+I1202 22:33:21.056238 16485 net.cpp:154] conv4b needs backward computation.
+I1202 22:33:21.056248 16485 net.cpp:76] Creating Layer relu4b
+I1202 22:33:21.056265 16485 net.cpp:86] relu4b <- conv4b
+I1202 22:33:21.056285 16485 net.cpp:100] relu4b -> conv4b (in-place)
+I1202 22:33:21.056293 16485 net.cpp:127] Top shape: 4 512 8 14 14 (3211264)
+I1202 22:33:21.056299 16485 net.cpp:136] Memory  required for Data 905576448
+I1202 22:33:21.056303 16485 net.cpp:154] relu4b needs backward computation.
+I1202 22:33:21.056316 16485 net.cpp:76] Creating Layer pool4
+I1202 22:33:21.056330 16485 net.cpp:86] pool4 <- conv4b
+I1202 22:33:21.056336 16485 net.cpp:112] pool4 -> pool4
+I1202 22:33:21.056355 16485 net.cpp:127] Top shape: 4 512 4 7 7 (401408)
+I1202 22:33:21.056370 16485 net.cpp:136] Memory  required for Data 907182080
+I1202 22:33:21.056372 16485 net.cpp:154] pool4 needs backward computation.
+I1202 22:33:21.056396 16485 net.cpp:76] Creating Layer conv5a
+I1202 22:33:21.056401 16485 net.cpp:86] conv5a <- pool4
+I1202 22:33:21.056416 16485 net.cpp:112] conv5a -> conv5a
+I1202 22:33:22.007969 16485 net.cpp:127] Top shape: 4 512 4 7 7 (401408)
+I1202 22:33:22.007985 16485 net.cpp:136] Memory  required for Data 908787712
+I1202 22:33:22.007989 16485 net.cpp:154] conv5a needs backward computation.
+I1202 22:33:22.008000 16485 net.cpp:76] Creating Layer relu5a
+I1202 22:33:22.008007 16485 net.cpp:86] relu5a <- conv5a
+I1202 22:33:22.008025 16485 net.cpp:100] relu5a -> conv5a (in-place)
+I1202 22:33:22.008033 16485 net.cpp:127] Top shape: 4 512 4 7 7 (401408)
+I1202 22:33:22.008035 16485 net.cpp:136] Memory  required for Data 908787712
+I1202 22:33:22.008049 16485 net.cpp:154] relu5a needs backward computation.
+I1202 22:33:22.008057 16485 net.cpp:76] Creating Layer conv5b
+I1202 22:33:22.008061 16485 net.cpp:86] conv5b <- conv5a
+I1202 22:33:22.008066 16485 net.cpp:112] conv5b -> conv5b
+I1202 22:33:22.935639 16485 net.cpp:127] Top shape: 4 512 4 7 7 (401408)
+I1202 22:33:22.935655 16485 net.cpp:136] Memory  required for Data 910393344
+I1202 22:33:22.935669 16485 net.cpp:154] conv5b needs backward computation.
+I1202 22:33:22.935678 16485 net.cpp:76] Creating Layer relu5b
+I1202 22:33:22.935683 16485 net.cpp:86] relu5b <- conv5b
+I1202 22:33:22.935689 16485 net.cpp:100] relu5b -> conv5b (in-place)
+I1202 22:33:22.935693 16485 net.cpp:127] Top shape: 4 512 4 7 7 (401408)
+I1202 22:33:22.935695 16485 net.cpp:136] Memory  required for Data 910393344
+I1202 22:33:22.935698 16485 net.cpp:154] relu5b needs backward computation.
+I1202 22:33:22.935703 16485 net.cpp:76] Creating Layer pool5
+I1202 22:33:22.935704 16485 net.cpp:86] pool5 <- conv5b
+I1202 22:33:22.935708 16485 net.cpp:112] pool5 -> pool5
+I1202 22:33:22.935716 16485 net.cpp:127] Top shape: 4 512 4 4 4 (131072)
+I1202 22:33:22.935719 16485 net.cpp:136] Memory  required for Data 910917632
+I1202 22:33:22.935721 16485 net.cpp:154] pool5 needs backward computation.
+I1202 22:33:22.935727 16485 net.cpp:76] Creating Layer fc6-1-convdeconv
+I1202 22:33:22.935729 16485 net.cpp:86] fc6-1-convdeconv <- pool5
+I1202 22:33:22.935732 16485 net.cpp:112] fc6-1-convdeconv -> fc6-1-convdeconv
+I1202 22:33:40.023023 16485 net.cpp:127] Top shape: 4 4096 8 1 1 (131072)
+I1202 22:33:40.023039 16485 net.cpp:136] Memory  required for Data 911441920
+I1202 22:33:40.023042 16485 net.cpp:154] fc6-1-convdeconv needs backward computation.
+I1202 22:33:40.023053 16485 net.cpp:76] Creating Layer relu6
+I1202 22:33:40.023057 16485 net.cpp:86] relu6 <- fc6-1-convdeconv
+I1202 22:33:40.023075 16485 net.cpp:100] relu6 -> fc6-1-convdeconv (in-place)
+I1202 22:33:40.023079 16485 net.cpp:127] Top shape: 4 4096 8 1 1 (131072)
+I1202 22:33:40.023082 16485 net.cpp:136] Memory  required for Data 911441920
+I1202 22:33:40.023083 16485 net.cpp:154] relu6 needs backward computation.
+I1202 22:33:40.023097 16485 net.cpp:76] Creating Layer drop6
+I1202 22:33:40.023099 16485 net.cpp:86] drop6 <- fc6-1-convdeconv
+I1202 22:33:40.023102 16485 net.cpp:100] drop6 -> fc6-1-convdeconv (in-place)
+I1202 22:33:40.023105 16485 net.cpp:127] Top shape: 4 4096 8 1 1 (131072)
+I1202 22:33:40.023108 16485 net.cpp:136] Memory  required for Data 911441920
+I1202 22:33:40.023109 16485 net.cpp:154] drop6 needs backward computation.
+I1202 22:33:40.023114 16485 net.cpp:76] Creating Layer fc7-1-convdeconv
+I1202 22:33:40.023116 16485 net.cpp:86] fc7-1-convdeconv <- fc6-1-convdeconv
+I1202 22:33:40.023119 16485 net.cpp:112] fc7-1-convdeconv -> fc7-1-convdeconv
+I1202 22:33:48.578861 16485 net.cpp:127] Top shape: 4 4096 16 1 1 (262144)
+I1202 22:33:48.578877 16485 net.cpp:136] Memory  required for Data 912490496
+I1202 22:33:48.578881 16485 net.cpp:154] fc7-1-convdeconv needs backward computation.
+I1202 22:33:48.578888 16485 net.cpp:76] Creating Layer relu7
+I1202 22:33:48.578893 16485 net.cpp:86] relu7 <- fc7-1-convdeconv
+I1202 22:33:48.578900 16485 net.cpp:100] relu7 -> fc7-1-convdeconv (in-place)
+I1202 22:33:48.578915 16485 net.cpp:127] Top shape: 4 4096 16 1 1 (262144)
+I1202 22:33:48.578917 16485 net.cpp:136] Memory  required for Data 912490496
+I1202 22:33:48.578918 16485 net.cpp:154] relu7 needs backward computation.
+I1202 22:33:48.578922 16485 net.cpp:76] Creating Layer drop7
+I1202 22:33:48.578935 16485 net.cpp:86] drop7 <- fc7-1-convdeconv
+I1202 22:33:48.578938 16485 net.cpp:100] drop7 -> fc7-1-convdeconv (in-place)
+I1202 22:33:48.578941 16485 net.cpp:127] Top shape: 4 4096 16 1 1 (262144)
+I1202 22:33:48.578943 16485 net.cpp:136] Memory  required for Data 912490496
+I1202 22:33:48.578945 16485 net.cpp:154] drop7 needs backward computation.
+I1202 22:33:48.578951 16485 net.cpp:76] Creating Layer predict
+I1202 22:33:48.578954 16485 net.cpp:86] predict <- fc7-1-convdeconv
+I1202 22:33:48.578958 16485 net.cpp:112] predict -> predict
+I1202 22:33:48.604475 16485 net.cpp:127] Top shape: 4 22 32 1 1 (2816)
+I1202 22:33:48.604487 16485 net.cpp:136] Memory  required for Data 912501760
+I1202 22:33:48.604490 16485 net.cpp:154] predict needs backward computation.
+I1202 22:33:48.604497 16485 net.cpp:76] Creating Layer predict_predict_0_split
+I1202 22:33:48.604502 16485 net.cpp:86] predict_predict_0_split <- predict
+I1202 22:33:48.604511 16485 net.cpp:100] predict_predict_0_split -> predict (in-place)
+I1202 22:33:48.604524 16485 net.cpp:112] predict_predict_0_split -> predict_predict_0_split_1
+I1202 22:33:48.604532 16485 net.cpp:127] Top shape: 4 22 32 1 1 (2816)
+I1202 22:33:48.604533 16485 net.cpp:127] Top shape: 4 22 32 1 1 (2816)
+I1202 22:33:48.604535 16485 net.cpp:136] Memory  required for Data 912501760
+I1202 22:33:48.604547 16485 net.cpp:154] predict_predict_0_split needs backward computation.
+I1202 22:33:48.604552 16485 net.cpp:76] Creating Layer prob
+I1202 22:33:48.604553 16485 net.cpp:86] prob <- predict
+I1202 22:33:48.604557 16485 net.cpp:112] prob -> prob
+I1202 22:33:48.604562 16485 net.cpp:127] Top shape: 4 22 32 1 1 (2816)
+I1202 22:33:48.604565 16485 net.cpp:136] Memory  required for Data 912513024
+I1202 22:33:48.604568 16485 net.cpp:154] prob needs backward computation.
+I1202 22:33:48.604573 16485 net.cpp:76] Creating Layer loss
+I1202 22:33:48.604575 16485 net.cpp:86] loss <- predict_predict_0_split_1
+I1202 22:33:48.604578 16485 net.cpp:86] loss <- truth
+I1202 22:33:48.604583 16485 net.cpp:112] loss -> accuracy
+I1202 22:33:48.604590 16485 net.cpp:127] Top shape: 1 1 1 1 1 (1)
+I1202 22:33:48.604593 16485 net.cpp:136] Memory  required for Data 912513028
+I1202 22:33:48.604594 16485 net.cpp:154] loss needs backward computation.
+I1202 22:33:48.604596 16485 net.cpp:165] This network produces output accuracy
+I1202 22:33:48.604599 16485 net.cpp:165] This network produces output prob
+I1202 22:33:48.604635 16485 net.cpp:183] Collecting Learning Rate and Weight Decay.
+I1202 22:33:48.604666 16485 net.cpp:176] Network initialization done.
+I1202 22:33:48.604670 16485 net.cpp:177] Memory required for Data 912513028
+I1202 22:34:14.980007 16485 net.cpp:322] Copying source layer data
+I1202 22:34:14.980022 16485 net.cpp:322] Copying source layer conv1a
+I1202 22:34:14.980098 16485 net.cpp:322] Copying source layer relu1a
+I1202 22:34:14.980101 16485 net.cpp:322] Copying source layer pool1
+I1202 22:34:14.980104 16485 net.cpp:322] Copying source layer conv2a
+I1202 22:34:14.982012 16485 net.cpp:322] Copying source layer relu2a
+I1202 22:34:14.982017 16485 net.cpp:322] Copying source layer pool2
+I1202 22:34:14.982018 16485 net.cpp:322] Copying source layer conv3a
+I1202 22:34:14.989578 16485 net.cpp:322] Copying source layer relu3a
+I1202 22:34:14.989586 16485 net.cpp:322] Copying source layer conv3b
+I1202 22:34:15.004833 16485 net.cpp:322] Copying source layer relu3b
+I1202 22:34:15.004848 16485 net.cpp:322] Copying source layer pool3
+I1202 22:34:15.004850 16485 net.cpp:322] Copying source layer conv4a
+I1202 22:34:15.034999 16485 net.cpp:322] Copying source layer relu4a
+I1202 22:34:15.035012 16485 net.cpp:322] Copying source layer conv4b
+I1202 22:34:15.240159 16485 net.cpp:322] Copying source layer relu4b
+I1202 22:34:15.240176 16485 net.cpp:322] Copying source layer pool4
+I1202 22:34:15.240180 16485 net.cpp:322] Copying source layer conv5a
+I1202 22:34:15.723997 16485 net.cpp:322] Copying source layer relu5a
+I1202 22:34:15.724017 16485 net.cpp:322] Copying source layer conv5b
+I1202 22:34:16.212776 16485 net.cpp:322] Copying source layer relu5b
+I1202 22:34:16.212795 16485 net.cpp:322] Copying source layer pool5
+I1202 22:34:16.212798 16485 net.cpp:322] Copying source layer fc6-1-convdeconv
+I1202 22:34:25.390334 16485 net.cpp:322] Copying source layer relu6
+I1202 22:34:25.390354 16485 net.cpp:322] Copying source layer drop6
+I1202 22:34:25.390357 16485 net.cpp:322] Copying source layer fc7-1-convdeconv
+I1202 22:34:29.758117 16485 net.cpp:322] Copying source layer relu7
+I1202 22:34:29.758144 16485 net.cpp:322] Copying source layer drop7
+I1202 22:34:29.758147 16485 net.cpp:322] Copying source layer predict
+I1202 22:34:29.761313 16485 net.cpp:322] Copying source layer loss
+E1202 22:34:29.785912 16485 extract_image_features.cpp:72] Extracting features for 9046 batches
+E1202 22:34:30.764678 16485 extract_image_features.cpp:112] Successfully extracted 0 features!

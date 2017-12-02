@@ -1,0 +1,5 @@
+training/snapshot/
+training/init/
+*.mat
+predata/fb/
+predata/fb_eval/
